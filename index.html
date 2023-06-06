@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <!-- Styling link -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <div class="form-input-task">
+                <input type="text" id="input-task" placeholder="Task description" autofocus required>
+            </div>
+            <div class="form-input-date">
+                <span>Due date:</span>
+                <input type="date" name="" id="input-date" required>
+            </div>
+            <div class="form-button">
+                <button type="submit" id="form-btn">Save</button>
+            </div>
+        </form>
+    </div>
+    <div class="container tasks-box">
+        <table class="table">
+            <thead id="thead">
+                <tr>
+                    <th>#</th>
+                    <th>Description</th>
+                    <th>Due date</th>
+                    <th>Status</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tasks-container"></tbody>
+            <tfoot>
+                <tr id="footer">
+                </tr>
+              </tfoot>
+        </table>
+        <template id="tasks-template">
+            <tr id="task-row" class="task-row">
+                <th id="task-Id">0</th>
+                <th id="task-description">Run Party</th>
+                <th id="task-date">20/02/2023</th>
+                <th><i id="task-status" class="fa-solid"></i></th>
+                <th id="task-delete"><i class="fa-solid fa-trash"></i></th>
+            </tr>
+        </template>
+    </div>
+    <!-- JS script -->
+    <script src="index.js"></script>
+</body>
+</html>
